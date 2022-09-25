@@ -3,13 +3,15 @@ import React, { createContext, useContext, useState, useEffect } from 'react'
 const ViewportContext  = createContext({
     isMobile: window.innerWidth < 500,
     height: window.innerHeight,
-    width: window.innerWidth
+    width: window.innerWidth,
+    isOpen: false
 })
 
 export const ViewportProvider = ({ children }) => {
     const [isMobile, setIsMobile] = useState(window.innerWidth < 500)
     const [height, setHeight] = useState(window.innerHeight)
     const [width, setWidth] = useState(window.innerWidth)
+    const [isOpen, setOpen] = useState(false);
 
     const handleResize = () => {
         setIsMobile(window.innerWidth < 500)
@@ -22,7 +24,7 @@ export const ViewportProvider = ({ children }) => {
     }, [])
 
     return (
-        <ViewportContext.Provider value={{ isMobile, height, width }}>
+        <ViewportContext.Provider value={{ isMobile, height, width, isOpen, setOpen }}>
             {children}
         </ViewportContext.Provider>
     )

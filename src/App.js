@@ -1,11 +1,11 @@
 import React from 'react';
 
-import AppBar from './components/AppBar'
+import TheAppBar from './components/AppBar'
 
 function App() {
   return (
     <div className="app">
-      <AppBar/>
+      <TheAppBar/>
     </div>
   );
 }

@@ -4,7 +4,7 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
-import { ViewportProvider } from './use-viewport';
+import { ViewportProvider } from './contextWarper';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
