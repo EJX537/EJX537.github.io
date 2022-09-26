@@ -9,13 +9,13 @@ import { useViewport } from '../contextWarper'
 const projects = ['Inbox', 'Starred', 'Send email', 'Drafts'];
 
 function Projects() {
-    const { width, isOpen, setOpen } = useViewport();
+    const { isMobile, width, isOpen, setOpen } = useViewport();
     const handleDrawerToggle = () => {
         setOpen(!isOpen);
     };
     return (
         <Box
-            sx={{ width: width }}
+            sx={{ width: isMobile ? width : 1 }}
             role="presentation"
             onClick={ handleDrawerToggle }
         >

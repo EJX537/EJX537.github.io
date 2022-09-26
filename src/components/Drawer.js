@@ -18,7 +18,7 @@ const useStyles = makeStyles(theme => ({
 }));
 
 function TheDrawer() {
-    const { width, isOpen, setOpen } = useViewport();
+    const { width, isMobile, isOpen, setOpen } = useViewport();
     const classes = useStyles();
     const handleDrawerToggle = () => {
         setOpen(!isOpen);
@@ -26,7 +26,7 @@ function TheDrawer() {
     return (
         <Drawer
             anchor='right'
-            open={isOpen}
+            open={isMobile && isOpen}
             onClose={handleDrawerToggle}
         >
             <CssBaseline/>

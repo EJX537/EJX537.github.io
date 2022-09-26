@@ -8,15 +8,13 @@ function SideBar () {
 
     return (
         <div
-        sx={{
-            'maxWidth': width >= 550 ? '35%' : '90%',
-            'position': 'relative',
-            'overflow': 'auto',
-            'height': height,
-            'width': width,
-            '& ul': {padding: 0},
-          }}>
-            { isMobile ? '' : Projects }
+            sx={{
+                'position': 'relative',
+                'overflow': 'auto',
+                '& ul': {padding: 0},
+          }}
+        >
+            { isMobile ? <div> </div> : <Projects/> }
         </div>
     );
 };
