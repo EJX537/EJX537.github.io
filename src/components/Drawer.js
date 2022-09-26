@@ -1,43 +1,43 @@
 import React from "react";
 import Box from '@mui/material/Box';
 import Divider from '@mui/material/Divider';
-import List from '@mui/material/List';
 import Toolbar from '@mui/material/Toolbar';
-import ListItem from '@mui/material/ListItem';
-import ListItemButton from '@mui/material/ListItemButton';
-import ListItemText from '@mui/material/ListItemText';
 import Typography from '@mui/material/Typography';
 import { makeStyles } from "@material-ui/core/styles";
 import CssBaseline from "@material-ui/core/CssBaseline";
+import Drawer from "@mui/material/Drawer";
 
 import { useViewport } from '../contextWarper'
+import Projects from "./Projects";
 
 const useStyles = makeStyles(theme => ({
-    footer: {
+    header: {
       display:"flex",
       justifyContent:"center",
     }
-  }));
+}));
 
 function TheDrawer() {
-    const { isOpen, setOpen } = useViewport()
+    const { width, isOpen, setOpen } = useViewport();
     const classes = useStyles();
     const handleDrawerToggle = () => {
         setOpen(!isOpen);
-    }
+    };
     return (
-        <Box onClick={handleDrawerToggle}>
-            <CssBaseline />
-            <Toolbar className={classes.footer}>
-                <Typography variant="h4" align="center"
-                >
+        <Drawer
+            anchor='right'
+            open={isOpen}
+            onClose={handleDrawerToggle}
+        >
+            <CssBaseline/>
+            <Toolbar className={classes.header}>
+                <Typography variant="h5" align="center">
                     Projects
                 </Typography>
             </Toolbar>
-            <Divider />
-            <List>
-            </List>
-      </Box>
+            <Divider/>
+            <Projects/>
+        </Drawer>
     );
 }
 

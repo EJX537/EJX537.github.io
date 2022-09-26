@@ -5,14 +5,15 @@ import Drawer from '@mui/material/Drawer';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
-import HomeIcon from '@mui/icons-material/Home';
-
 import Button from '@mui/material/Button';
+
+import HomeIcon from '@mui/icons-material/Home';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 
 import { useViewport } from '../contextWarper'
 import TheDrawer from './Drawer'
+
 function TheAppBar() {
     const { isMobile, width, isOpen, setOpen } = useViewport()
     const handleDrawerToggle = () => {
