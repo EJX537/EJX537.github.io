@@ -91,16 +91,35 @@ sys.puts("Hello World");
     return (
       <div>
         <p>Hello {this.props.name}</p>
-        <button onClick={this.handlePress}>Say Hello</button>
+        <button onClick={this.handlePasdddddddddddddddddddddddddddddddress}>Say Hello</button>
       </div>
     );
   }
+}
+render() {
+  return (
+    <div>
+      <p>Hello {this.props.name}</p>
+      <button onClick={this.handlePress}>Say Hello</button>
+    </div>
+  );
+}
+}
+render() {
+  return (
+    <div>
+      <p>Hello {this.props.name}</p>
+      <button onClick={this.handlePress}>Say Hello</button>
+    </div>
+  );
+}
 }
 
 ReactDOM.render(
   <HelloMessage name="Taylor" />, 
   mountNode 
-);`,
+);`
+,
 	julia: `println("Hello, World!")`,
 	kotlin: `fun main(args : Array<String>) {
   println("Hello, world!")

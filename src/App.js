@@ -9,31 +9,36 @@ import Main from './components/Main';
 import { useViewport } from './contextWarper'
 
 function App() {
-  const { isMobile } = useViewport()
+  const { isMobile, height } = useViewport()
 
   return (
     <div className="app">
       <Box
         sx={{
           display: "grid",
-          gridTemplateColumns: "repeat(4, 1fr)",
+          gridTemplateColumns: "repeat(16, 1fr)",
           gap: 0,
           gridTemplateRows: "auto",
           gridTemplateAreas: 
-            `"header header header header"
-            "main main main ${ isMobile ? 'main' : 'main' }"
-            "footer footer footer footer"`
+            `"header header header header header header header header header header header header header header header header"
+            "${ isMobile ? 'main' : '.' } main main main main main main main main main main main ${ isMobile ? 'main' : 'sidebar' } ${ isMobile ? 'main' : 'sidebar' } ${ isMobile ? 'main' : 'sidebar' } ${ isMobile ? 'main' : '.' }"
+            "footer footer footer footer footer footer footer footer footer footer footer footer footer footer footer footer"`
         }}
       >
         <Box sx={{ gridArea: "header", bgcolor: "primary.main" }}>
           <Toolbar/>
           <TheAppBar/>
         </Box>
-        <Box sx={{ gridArea: "main", bgcolor: "secondary.main" }}>
+        <Box
+          sx={{ gridArea: "main", bgcolor: "secondary.main" }}
+          style={{height: height - (isMobile ? 56 : 64) - 21}}
+          display="flex"
+          justifyContent="center"
+          >
           <Main/>
         </Box>
         <Box sx={{ gridArea: "sidebar", bgcolor: "error.main" }}>
-          { isMobile? <SideBar/> : <div/> }
+          { isMobile?  <div/> : <SideBar/> }
         </Box>
         <Box sx={{ gridArea: "footer", bgcolor: "warning.dark" }}>Footer</Box>
       </Box>
