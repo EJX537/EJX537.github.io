@@ -12,6 +12,9 @@ export const ViewportProvider = ({ children }) => {
     const [height, setHeight] = useState(window.innerHeight)
     const [width, setWidth] = useState(window.innerWidth)
     const [isOpen, setOpen] = useState(false);
+    const [isAbout, setAbout] = useState(false);
+    const [isMe, setMe] = useState(false);
+
 
     const handleResize = () => {
         setIsMobile(window.innerWidth < 500)
@@ -24,7 +27,7 @@ export const ViewportProvider = ({ children }) => {
     }, [])
 
     return (
-        <ViewportContext.Provider value={{ isMobile, height, width, isOpen, setOpen }}>
+        <ViewportContext.Provider value={{ isMobile, height, width, isOpen, setOpen, isAbout, setAbout, isMe, setMe }}>
             {children}
         </ViewportContext.Provider>
     )

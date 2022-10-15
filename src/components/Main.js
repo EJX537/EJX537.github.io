@@ -5,20 +5,22 @@ import sample from "./codeblock";
 
 import { useViewport } from '../contextWarper'
 import { Toolbar, Typography } from "@mui/material";
+import About from './About';
+import Resume from './Resume';
 
 const Main = () => {
   const [language, changeLanguage] = useState("jsx");
   const [languageDemo, changeDemo] = useState(sample["jsx"]);
   const { isMobile, width, isOpen, setOpen } = useViewport();
   return (
-      <Box 
-        style={{ width: isMobile ? '100%' : '95%' }}
-        >
-        <Toolbar>
-          <Typography>
-           Shit Code
-          </Typography>
-        </Toolbar>
+    <Box 
+      style={{ width: isMobile ? '100%' : '95%' }}
+      >
+      <Toolbar>
+        <Typography>
+          Shit Code
+        </Typography>
+      </Toolbar>
         <Box style={{ width: isMobile ? '100%' : '95%' }}>
           <CopyBlock 
             sx={{ height: 100000 }}
@@ -36,7 +38,9 @@ const Main = () => {
         123123123123123123123123123123123123123123123123123123
         </Typography>
       </Box>
-      </Box>
+      <About/>
+      <Resume/>
+    </Box>
   );
 };
 
