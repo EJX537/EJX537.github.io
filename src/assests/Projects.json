@@ -12,15 +12,15 @@
             "Files.js"
         ],
         "Data": {
-            "App.js": {"Link": "Github.com", "Language": "js"},
-            "About.js": {"Link": "Github.com", "Language": "js"},
-            "AppBar.js": {"Link": "Github.com", "Language": "js"},
+            "App.js": {"Link": "https://raw.githubusercontent.com/EJX537/EJX537.github.io/main/src/App.js", "Language": "js"},
+            "About.js": {"Link": "https://raw.githubusercontent.com/EJX537/EJX537.github.io/main/src/components/About.js", "Language": "js"},
+            "AppBar.js": {"Link": "https://raw.githubusercontent.com/EJX537/EJX537.github.io/main/src/components/AppBar.js", "Language": "js"},
             "Drawer.js": {"Link": "https://raw.githubusercontent.com/EJX537/EJX537.github.io/main/src/components/Drawer.js", "Language": "js"},
-            "Main.js": {"Link": "Github.com", "Language": "js"},
-            "Projects.js": {"Link": "Github.com", "Language": "js"},
-            "SideBar.js": {"Link": "Github.com", "Language": "js"},
-            "Resume.js": {"Link": "Github.com", "Language": "js"},
-            "Files.js": {"Link": "Github.com", "Language": "js"}
+            "Main.js": {"Link": "https://raw.githubusercontent.com/EJX537/EJX537.github.io/main/src/components/Main.js", "Language": "js"},
+            "Projects.js": {"Link": "https://raw.githubusercontent.com/EJX537/EJX537.github.io/main/src/components/Projects.js", "Language": "js"},
+            "SideBar.js": {"Link": "https://raw.githubusercontent.com/EJX537/EJX537.github.io/main/src/components/SideBar.js", "Language": "js"},
+            "Resume.js": {"Link": "https://raw.githubusercontent.com/EJX537/EJX537.github.io/main/src/components/Resume.js", "Language": "js"},
+            "Files.js": {"Link": "https://raw.githubusercontent.com/EJX537/EJX537.github.io/main/src/components/Files.js", "Language": "js"}
         },
         "MainPage": {"Link": "Github.com", "Language": "js"},
         "README":{
