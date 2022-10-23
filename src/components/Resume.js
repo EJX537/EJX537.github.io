@@ -7,6 +7,7 @@ import Typography from '@mui/material/Typography';
 import CloseIcon from '@mui/icons-material/Close';
 import { Document, Page, pdfjs } from "react-pdf";
 
+import 'react-pdf/dist/esm/Page/AnnotationLayer.css';
 import { useViewport } from '../contextWarper'
 
 pdfjs.GlobalWorkerOptions.workerSrc =
@@ -18,7 +19,7 @@ const options = {
   };
 
 export default function FullScreenDialog() {
-  const { isMe, setMe } = useViewport()
+  const { isMe, setMe, width, isMobile} = useViewport()
   const handleClose = () => {
     setMe(false);
   };
@@ -43,15 +44,20 @@ export default function FullScreenDialog() {
           </Typography>
         </Toolbar>
       </AppBar>
-      <Document
-          file={require('../assests/sample.pdf')}
-          options={options}
-          loading=''
-        >
-          <Page
-            pageNumber={1}
-          />
-        </Document>
+      <div
+        display='flex'
+      >
+        <Document
+            file={require('../assests/Resume.pdf')}
+            options={options}
+            loading=''
+            >
+            <Page
+              pageNumber={1}
+              width={isMobile ? width : width * .9}
+              />
+          </Document>
+      </div>
     </Dialog>
   );
 }

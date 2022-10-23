@@ -31,7 +31,6 @@ function App() {
         </Box>
         <Box
           sx={{ gridArea: "main", bgcolor: "secondary.main" }}
-          style={{height: height - (isMobile ? 56 : 64) - 21}}
           display="flex"
           justifyContent="center"
           >

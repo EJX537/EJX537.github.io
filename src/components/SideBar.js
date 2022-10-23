@@ -14,7 +14,7 @@ function SideBar () {
                 '& ul': {padding: 0},
           }}
         >
-            { isMobile ? <div> </div> : <Projects/> }
+            { isMobile ? <div/> : <Projects/> }
         </div>
     );
 };

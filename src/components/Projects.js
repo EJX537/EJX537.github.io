@@ -5,13 +5,22 @@ import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemText from '@mui/material/ListItemText';
 
-import { useViewport } from '../contextWarper'
-const projects = ['Inbox', 'Starred', 'Send email', 'Drafts'];
+import { useViewport } from '../contextWarper';
 
+import projectContent from '../assests/Projects.json';
+const projects = [];
+
+for (const project in projectContent) {
+    projects.push(project);
+}
 function Projects() {
-    const { isMobile, width, isOpen, setOpen } = useViewport();
+    const { isMobile, width, isOpen, setOpen,
+            isProject, setProject } = useViewport();
     const handleDrawerToggle = () => {
         setOpen(!isOpen);
+    };
+    const handleClick = (name) => {
+        setProject(name);
     };
     return (
         <Box
@@ -20,10 +29,14 @@ function Projects() {
             onClick={ handleDrawerToggle }
         >
             <List>
-                {projects.map((text, index) => (
+                {projects.map((text) => (
                     <ListItem key={text} disablePadding>
                         <ListItemButton>
-                            <ListItemText primary={text} align="center" />
+                            <ListItemText
+                                primary={text}
+                                align="center"
+                                onClick={ () => handleClick(text) }
+                            />
                         </ListItemButton>
                     </ListItem>
                 ))}

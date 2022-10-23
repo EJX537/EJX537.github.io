@@ -6,8 +6,8 @@ import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import Button from '@mui/material/Button';
+import Typography from '@mui/material/Typography';
 
-import HomeIcon from '@mui/icons-material/Home';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 
@@ -15,7 +15,7 @@ import { useViewport } from '../contextWarper'
 import TheDrawer from './Drawer'
 
 function TheAppBar() {
-    const { setAbout, setMe, width, isOpen, setOpen } = useViewport()
+    const { setAbout, width, isOpen, setOpen } = useViewport()
     const handleDrawerToggle = () => {
         setOpen(!isOpen);
     }
@@ -28,20 +28,24 @@ function TheAppBar() {
     const handleClickAbout = () => {
       setAbout(true);
     }
-    const handleClickMe = () => {
-      setMe(true);
-    }
     return (
       <Box sx={{ display: 'flex' }}>
         <AppBar component="nav">
           <Toolbar>
             <IconButton
-              size="large"
-              color="inherit"
-              onClick={handleClickMe}
-            >
-              <HomeIcon />
+                color="inherit"
+                aria-label="open drawer"
+                onClick={handleDrawerToggle}
+                sx={{ display: { sm: 'none' } }}
+              >
+                <MenuIcon />
             </IconButton>
+            <Box sx={{ flexGrow: 1 }} />
+            <Typography
+              fontWeight="bold"
+            >
+              Eric's Portfolio - Shit Code
+            </Typography>
             <Box sx={{ flexGrow: 1 }} />
             <Button sx={{ color: '#fff' }} onClick={handleClickAbout}>
               About
@@ -60,14 +64,7 @@ function TheAppBar() {
             >
               <LinkedInIcon />
             </IconButton>
-            <IconButton
-              color="inherit"
-              aria-label="open drawer"
-              onClick={handleDrawerToggle}
-              sx={{ display: { sm: 'none' } }}
-            >
-              <MenuIcon />
-            </IconButton>
+
           </Toolbar>
         </AppBar>
         <Box component="nav">
