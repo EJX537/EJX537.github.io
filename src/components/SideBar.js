@@ -10,7 +10,6 @@ function SideBar () {
         <div
             sx={{
                 'position': 'relative',
-                'overflow': 'auto',
                 '& ul': {padding: 0},
           }}
         >

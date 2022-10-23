@@ -15,7 +15,7 @@ import { useViewport } from '../contextWarper'
 import TheDrawer from './Drawer'
 
 function TheAppBar() {
-    const { setAbout, width, isOpen, setOpen } = useViewport()
+    const { setAbout, setFile, width, isOpen, setOpen, setProject, isProject, isMobile } = useViewport()
     const handleDrawerToggle = () => {
         setOpen(!isOpen);
     }
@@ -27,7 +27,11 @@ function TheAppBar() {
     };
     const handleClickAbout = () => {
       setAbout(true);
-    }
+    };
+    const handleToHome = () => {
+      setProject(null);
+      setFile("README")
+    };
     return (
       <Box sx={{ display: 'flex' }}>
         <AppBar component="nav">
@@ -41,11 +45,11 @@ function TheAppBar() {
                 <MenuIcon />
             </IconButton>
             <Box sx={{ flexGrow: 1 }} />
-            <Typography
-              fontWeight="bold"
-            >
-              Eric's Portfolio - Shit Code
+            <Button sx={{ color: '#fff' }} onClick={handleToHome}>
+            <Typography fontWeight="bold">
+              {isMobile ? "" : "Eric's Portfolio Website"} {isMobile ? '' : isProject ? '-' : ''} {isProject}
             </Typography>
+              </Button>
             <Box sx={{ flexGrow: 1 }} />
             <Button sx={{ color: '#fff' }} onClick={handleClickAbout}>
               About

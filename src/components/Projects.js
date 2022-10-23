@@ -15,12 +15,13 @@ for (const project in projectContent) {
 }
 function Projects() {
     const { isMobile, width, isOpen, setOpen,
-            isProject, setProject } = useViewport();
+            isProject, setProject, setFile } = useViewport();
     const handleDrawerToggle = () => {
-        setOpen(!isOpen);
+        if (isMobile) setOpen(!isOpen);
     };
     const handleClick = (name) => {
         setProject(name);
+        setFile("README")
     };
     return (
         <Box
@@ -31,11 +32,14 @@ function Projects() {
             <List>
                 {projects.map((text) => (
                     <ListItem key={text} disablePadding>
-                        <ListItemButton>
+                        <ListItemButton key={text + 1}
+                            disabled = {isProject === text}
+                            onClick={ () => handleClick(text) }
+                        >
                             <ListItemText
+                                key={text + 1}
                                 primary={text}
                                 align="center"
-                                onClick={ () => handleClick(text) }
                             />
                         </ListItemButton>
                     </ListItem>

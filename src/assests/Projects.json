@@ -1,7 +1,6 @@
 {
     "Portifolio": {
-        "Files": 
-        [
+        "Files": [
             "App.js",
             "About.js",
             "AppBar.js",
@@ -11,13 +10,35 @@
             "SideBar.js",
             "Resume.js",
             "Files.js"
-        ]
+        ],
+        "Data": {
+            "App.js": {"Link": "Github.com", "Language": "js"},
+            "About.js": {"Link": "Github.com", "Language": "js"},
+            "AppBar.js": {"Link": "Github.com", "Language": "js"},
+            "Drawer.js": {"Link": "https://raw.githubusercontent.com/EJX537/EJX537.github.io/main/src/components/Drawer.js", "Language": "js"},
+            "Main.js": {"Link": "Github.com", "Language": "js"},
+            "Projects.js": {"Link": "Github.com", "Language": "js"},
+            "SideBar.js": {"Link": "Github.com", "Language": "js"},
+            "Resume.js": {"Link": "Github.com", "Language": "js"},
+            "Files.js": {"Link": "Github.com", "Language": "js"}
+        },
+        "MainPage": {"Link": "Github.com", "Language": "js"},
+        "README":{
+            "Project_Name": "",
+            "png": "",
+            "Body": ""
+        }
     },
     "Test": {
         "Files": 
         [
             "Stuff.js",
             "Test.js"
-        ]
+        ],
+        "Links": {
+            "Stuff.js": {"Link": "Github.com", "Language": "js"},
+            "Test.js": {"Link": "Github.com", "Language": "js"}
+        },
+        "MainPage": {"Link": "Github.com", "Language": "js"}
     }
 }

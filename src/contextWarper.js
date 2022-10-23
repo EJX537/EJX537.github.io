@@ -14,7 +14,7 @@ export const ViewportProvider = ({ children }) => {
     const [isOpen, setOpen] = useState(false);
     const [isAbout, setAbout] = useState(false);
     const [isMe, setMe] = useState(false);
-    const [isFile, setFile] = useState(null);
+    const [isFile, setFile] = useState("README");
     const [isProject, setProject] = useState(null);
 
     const handleResize = () => {

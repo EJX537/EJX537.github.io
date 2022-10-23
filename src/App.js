@@ -21,8 +21,7 @@ function App() {
           gridTemplateRows: "auto",
           gridTemplateAreas: 
             `"header header header header header header header header header header header header header header header header"
-            "${ isMobile ? 'main' : '.' } main main main main main main main main main main main ${ isMobile ? 'main' : 'sidebar' } ${ isMobile ? 'main' : 'sidebar' } ${ isMobile ? 'main' : 'sidebar' } ${ isMobile ? 'main' : '.' }"
-            "footer footer footer footer footer footer footer footer footer footer footer footer footer footer footer footer"`
+            "${ isMobile ? 'main' : '.' } main main main main main main main main main main main ${ isMobile ? 'main' : 'sidebar' } ${ isMobile ? 'main' : 'sidebar' } ${ isMobile ? 'main' : 'sidebar' } ${ isMobile ? 'main' : '.' }"`
         }}
       >
         <Box sx={{ gridArea: "header", bgcolor: "primary.main" }}>
@@ -39,7 +38,13 @@ function App() {
         <Box sx={{ gridArea: "sidebar", bgcolor: "error.main" }}>
           { isMobile?  <div/> : <SideBar/> }
         </Box>
-        <Box sx={{ gridArea: "footer", bgcolor: "warning.dark" }}>Footer</Box>
+      </Box>
+      <Box
+        sx={{ bgcolor: "warning.dark" }}
+        bottom="0"
+        width="100%"
+      >
+        Footer
       </Box>
     </div>
   );
