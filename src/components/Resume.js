@@ -6,7 +6,8 @@ import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 import CloseIcon from '@mui/icons-material/Close';
 import { Document, Page, pdfjs } from "react-pdf";
-
+import Box from '@mui/material/Box';
+import DownloadIcon from '@mui/icons-material/Download';
 import 'react-pdf/dist/esm/Page/AnnotationLayer.css';
 import { useViewport } from '../contextWarper'
 
@@ -16,13 +17,14 @@ pdfjs.GlobalWorkerOptions.workerSrc =
 const options = {
     cMapUrl: 'cmaps/',
     cMapPacked: true,
-  };
+};
 
 export default function FullScreenDialog() {
   const { isMe, setMe, width, isMobile} = useViewport()
   const handleClose = () => {
     setMe(false);
   };
+
   return (
     <Dialog
       fullScreen
@@ -42,6 +44,16 @@ export default function FullScreenDialog() {
           <Typography sx={{ ml: 2, flex: 1 }} variant="h6" component="div">
               Resume
           </Typography>
+          <Box sx={{ flexGrow: 1 }} />
+          <IconButton
+            edge="start"
+            color="inherit"
+            aria-label="close"
+            href={require('../assests/Resume.pdf')}
+            download="resume.pdf"
+          >
+            <DownloadIcon/>
+          </IconButton>
         </Toolbar>
       </AppBar>
       <div

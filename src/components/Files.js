@@ -1,5 +1,5 @@
 import {React, useState, useEffect} from 'react';
-import Box from '@mui/material/Box';
+import Card from '@mui/material/Card';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 
@@ -31,7 +31,7 @@ export default function FilesExplorTabs() {
     }, [isProject])
 
     return (
-        <Box sx={{bgcolor: 'background.paper'}}>
+        <Card>
             <Tabs
                 text-transfrom="none"
                 value={value}
@@ -44,6 +44,6 @@ export default function FilesExplorTabs() {
                     <Tab label={text} key={index}/>
                 ))}
             </Tabs>
-        </Box>
+        </Card>
     )
 }

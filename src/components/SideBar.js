@@ -4,7 +4,7 @@ import Projects from "./Projects";
 import { useViewport } from '../contextWarper'
 
 function SideBar () {
-    const { width, height, isMobile } = useViewport()
+    const { isMobile } = useViewport()
 
     return (
         <div

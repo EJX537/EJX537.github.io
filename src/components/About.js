@@ -9,9 +9,6 @@ import Dialog from '@mui/material/Dialog';
 import DialogActions from '@mui/material/DialogActions';
 import DialogContent from '@mui/material/DialogContent';
 import DialogContentText from '@mui/material/DialogContentText';
-import IconButton from '@mui/material/IconButton';
-
-import HomeIcon from '@mui/icons-material/Home';
 
 export default function MaxWidthDialog() {
   const { isAbout, setMe, setAbout } = useViewport()
@@ -21,6 +18,7 @@ export default function MaxWidthDialog() {
   };
   const handleResume = () => {
     setMe(true);
+    setAbout(false);
   }
 
   return (
@@ -40,14 +38,7 @@ export default function MaxWidthDialog() {
           </Toolbar>
         <DialogContent>
           <DialogContentText>
-            Hello World Hello World Hello World
-            Hello World Hello World Hello World
-            Hello World Hello World Hello World
-            Hello World Hello World Hello World
-            Hello World Hello World Hello World
-            Hello World Hello World Hello World
-            Hello World Hello World Hello World
-            Hello World Hello World Hello World
+            I am a 3rd year student at the University of Santa Cruz studying Computer Engineering.
           </DialogContentText>
         </DialogContent>
         <DialogActions>

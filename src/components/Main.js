@@ -1,11 +1,8 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import Box from '@mui/material/Box';
 import { CopyBlock, dracula } from "react-code-blocks";
-import { makeStyles } from "@material-ui/core/styles";
-import AppBar from "@material-ui/core/AppBar";
 
 import { useViewport } from '../contextWarper'
-import { Toolbar, Typography } from "@mui/material";
 
 import About from './About';
 import Resume from './Resume';
@@ -19,16 +16,15 @@ const Main = () => {
   const [ language, setLanguage ] = useState("");
   const [ link, setLink ] = useState("");
   const { isMobile, isFile, isProject } = useViewport();
-  const [text, setText] = useState("");
-  const getNames = async() => {
+  const [ text, setText ] = useState("");
+  const getNames = useCallback(async() => {
     try {
       const names = await fetch(`${link}`);
       const textData = await names.text();
       return textData;
     } catch (err) {
-      console.log('fetch error', err);
     }
-  };
+  }, [link]);
   (async () => {
     const getText = await getNames();
     setText(getText);
@@ -39,7 +35,7 @@ const Main = () => {
       setLink(projectContent[isProject].Data[isFile].Link);
       setLanguage(projectContent[isProject].Data[isFile].Language);
     }
-  }, [isFile])
+  }, [getNames, isFile, isProject])
   return (
     <Box 
       style={{ width: isMobile ? '100%' : '95%' }}

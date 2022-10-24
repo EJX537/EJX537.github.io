@@ -20,7 +20,7 @@ const useStyles = makeStyles(theme => ({
 }));
 
 function TheDrawer() {
-    const { width, isMobile, isOpen, setOpen } = useViewport();
+    const { isMobile, isOpen, setOpen } = useViewport();
     const classes = useStyles();
     const handleDrawerToggle = () => {
         setOpen(!isOpen);

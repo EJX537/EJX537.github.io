@@ -22,23 +22,11 @@
             "Resume.js": {"Link": "https://raw.githubusercontent.com/EJX537/EJX537.github.io/main/src/components/Resume.js", "Language": "js"},
             "Files.js": {"Link": "https://raw.githubusercontent.com/EJX537/EJX537.github.io/main/src/components/Files.js", "Language": "js"}
         },
-        "MainPage": {"Link": "Github.com", "Language": "js"},
+        "MainPage": "https://github.com/EJX537/EJX537.github.io",
         "README":{
-            "Project_Name": "",
-            "png": "",
-            "Body": ""
+            "Project_Name": "Portifolio Website",
+            "png": true,
+            "Body": "Built on top of React and MUI, this website is hosted on Github Pages. A dynamic single page web application. Links to my other projects are showcased here."
         }
-    },
-    "Test": {
-        "Files": 
-        [
-            "Stuff.js",
-            "Test.js"
-        ],
-        "Links": {
-            "Stuff.js": {"Link": "Github.com", "Language": "js"},
-            "Test.js": {"Link": "Github.com", "Language": "js"}
-        },
-        "MainPage": {"Link": "Github.com", "Language": "js"}
     }
 }

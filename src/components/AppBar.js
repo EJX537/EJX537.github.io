@@ -68,7 +68,6 @@ function TheAppBar() {
             >
               <LinkedInIcon />
             </IconButton>
-
           </Toolbar>
         </AppBar>
         <Box component="nav">

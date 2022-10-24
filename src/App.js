@@ -1,6 +1,7 @@
 import React from 'react';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
+import Card from '@mui/material/Card';
 
 import TheAppBar from './components/AppBar';
 import SideBar from './components/SideBar';
@@ -24,27 +25,26 @@ function App() {
             "${ isMobile ? 'main' : '.' } main main main main main main main main main main main ${ isMobile ? 'main' : 'sidebar' } ${ isMobile ? 'main' : 'sidebar' } ${ isMobile ? 'main' : 'sidebar' } ${ isMobile ? 'main' : '.' }"`
         }}
       >
-        <Box sx={{ gridArea: "header", bgcolor: "primary.main" }}>
+        <Box sx={{ gridArea: "header" }}>
           <Toolbar/>
           <TheAppBar/>
         </Box>
         <Box
-          sx={{ gridArea: "main", bgcolor: "secondary.main" }}
+          sx={{ gridArea: "main" }}
           display="flex"
           justifyContent="center"
           >
           <Main/>
         </Box>
-        <Box sx={{ gridArea: "sidebar", bgcolor: "error.main" }}>
+        <Card sx={{ gridArea: "sidebar" }}>
           { isMobile?  <div/> : <SideBar/> }
-        </Box>
+        </Card>
       </Box>
       <Box
         sx={{ bgcolor: "warning.dark" }}
         bottom="0"
         width="100%"
       >
-        Footer
       </Box>
     </div>
   );
