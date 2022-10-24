@@ -10,6 +10,8 @@ import DialogActions from '@mui/material/DialogActions';
 import DialogContent from '@mui/material/DialogContent';
 import DialogContentText from '@mui/material/DialogContentText';
 
+import About_content from '../assests/About.json';
+
 export default function MaxWidthDialog() {
   const { isAbout, setMe, setAbout } = useViewport()
 
@@ -30,7 +32,7 @@ export default function MaxWidthDialog() {
       >
         <Toolbar>
           <Typography sx={{ ml: 2, flex: 1 }} variant="h6" component="div">
-            About me
+            {About_content.Title}
           </Typography>
           <Button autoFocus onClick={handleResume}>
               Resume
@@ -38,7 +40,7 @@ export default function MaxWidthDialog() {
           </Toolbar>
         <DialogContent>
           <DialogContentText>
-            I am a 3rd year student at the University of Santa Cruz studying Computer Engineering.
+            {About_content.Content}
           </DialogContentText>
         </DialogContent>
         <DialogActions>

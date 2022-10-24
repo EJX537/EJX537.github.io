@@ -11,6 +11,8 @@ import DownloadIcon from '@mui/icons-material/Download';
 import 'react-pdf/dist/esm/Page/AnnotationLayer.css';
 import { useViewport } from '../contextWarper'
 
+import './Resume.css';
+
 pdfjs.GlobalWorkerOptions.workerSrc =
   `//unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.js`;
 
@@ -20,7 +22,7 @@ const options = {
 };
 
 export default function FullScreenDialog() {
-  const { isMe, setMe, width, isMobile} = useViewport()
+  const { isMe, setMe, height, width, isMobile } = useViewport()
   const handleClose = () => {
     setMe(false);
   };
@@ -56,20 +58,19 @@ export default function FullScreenDialog() {
           </IconButton>
         </Toolbar>
       </AppBar>
-      <div
-        display='flex'
+      <Document
+        file={require('../assests/Resume.pdf')}
+        options={options}
+        loading=''
       >
-        <Document
-            file={require('../assests/Resume.pdf')}
-            options={options}
-            loading=''
-            >
-            <Page
-              pageNumber={1}
-              width={isMobile ? width : width * .9}
-              />
-          </Document>
-      </div>
+        <Page
+          id='5'
+          display='flex'
+          pageNumber={1}
+          width={isMobile ? width : 0}
+          height={height - 65}
+        />
+      </Document>
     </Dialog>
   );
 }

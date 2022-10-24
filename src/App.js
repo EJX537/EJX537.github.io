@@ -10,7 +10,7 @@ import Main from './components/Main';
 import { useViewport } from './contextWarper'
 
 function App() {
-  const { isMobile, height } = useViewport()
+  const { isMobile } = useViewport()
 
   return (
     <div className="app">
@@ -40,12 +40,11 @@ function App() {
           { isMobile?  <div/> : <SideBar/> }
         </Card>
       </Box>
-      <Box
-        sx={{ bgcolor: "warning.dark" }}
+      <Card
         bottom="0"
         width="100%"
       >
-      </Box>
+      </Card>
     </div>
   );
 }
