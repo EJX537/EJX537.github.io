@@ -64,8 +64,6 @@ export default function FullScreenDialog() {
         loading=''
       >
         <Page
-          id='5'
-          display='flex'
           pageNumber={1}
           width={isMobile ? width : 0}
           height={height - 65}
