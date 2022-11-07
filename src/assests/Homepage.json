@@ -1,6 +1,6 @@
 {
     "Title": "Welcome to Eric's Portfolio Website",
-    "Body": "I am currently a 3rd year student at the University of Santa Cruz studying Computer Engineering. Built ontop of React and MUI, this website is a demonstration of my skills as a programmer. In addition to my experience in working with JavaScript, some other languages I have worked with is Python and C.",
+    "Body": "I am currently a 3rd year student at the University of Santa Cruz studying Computer Engineering. Built ontop of React and MUI, this website is used to display various projects that demostrate my abilities as a programmer. In addition to my experience in working with JavaScript, some other languages I have worked with are Python and C.",
     "Image": "../assests/Logo.png",
     "Image-Data": "React Logo"
 }
