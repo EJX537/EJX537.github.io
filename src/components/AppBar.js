@@ -23,7 +23,7 @@ function TheAppBar() {
       window.open("https://github.com/EJX537");
     };
     const toLink = () => {
-      window.open("https://www.linkedin.com/in/eric-xie-01a27a227");
+      window.open("https://www.linkedin.com/in/ericjxie/");
     };
     const handleClickAbout = () => {
       setAbout(true);
