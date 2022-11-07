@@ -7,6 +7,7 @@ import { useViewport } from '../contextWarper'
 import About from './About';
 import Resume from './Resume';
 import ReadMe from './ReadMe';
+import NoPermission from './NoPermission';
 import HomePage from './Homepage';
 import FilesExplorTabs from "./Files";
 
@@ -57,6 +58,7 @@ const Main = () => {
         <br/>
       </Box>
       <About/>
+      <NoPermission/>
       <Resume/>
     </Box>
   );

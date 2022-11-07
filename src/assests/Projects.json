@@ -23,10 +23,20 @@
             "Files.js": {"Link": "https://raw.githubusercontent.com/EJX537/EJX537.github.io/main/src/components/Files.js", "Language": "js"}
         },
         "MainPage": "https://github.com/EJX537/EJX537.github.io",
-        "README":{
+        "README": {
             "Project_Name": "Portifolio Website",
             "png": true,
             "Body": "Built on top of React and MUI, this website is hosted on Github Pages. A dynamic single page web application. Links to my other projects are showcased here."
+        }
+    },
+    "Full-Stack": {
+        "Files": [],
+        "Data": {},
+        "MainPages": "",
+        "README": {
+            "Project_Name": "Full Stack Email Website",
+            "png": true,
+            "Body": "A full stack application built on top of React, MUI, OpenAPI, and Postgres. Emulates the feature set of gmail. Features include a login page with multiple user support, viewing and composing emails, alongslide flagging emails."
         }
     }
 }

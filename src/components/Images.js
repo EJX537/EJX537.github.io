@@ -1,5 +1,6 @@
 const Images = {
-    "Portifolio Website": {"path": require("../assests/React_MUI.png"), "data": "logo"}
+    "Portifolio Website": {"path": require("../assests/React_MUI.png"), "data": "logo"},
+    "Full Stack Email Website": {"path": "", "data": "false"},
 }
 
 export default Images;
