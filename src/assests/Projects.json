@@ -38,5 +38,24 @@
             "png": true,
             "Body": "A full stack application built on top of React, MUI, OpenAPI, and Postgres. Emulates the feature set of gmail. Features include a login page with multiple user support, viewing and composing emails, alongslide flagging emails."
         }
+    },
+    "HTTP-Server": {
+        "Files": [
+            "Httpserver.c",
+            "Parser.c",
+            "Method.c"
+        ],
+        "Data": {
+            "Httpserver.c": {"Link": "https://raw.githubusercontent.com/EJX537/Http-server/main/Httpserver.c", "Language": "C"},
+            "Parser.c": {"Link": "https://raw.githubusercontent.com/EJX537/Http-server/main/Parser.c", "Language": "C"},
+            "Method.c": {"Link": "https://raw.githubusercontent.com/EJX537/Http-server/main/Methods.c", "Language": "C"}
+
+        },
+        "MainPage": "https://github.com/EJX537/Http-server",
+        "README": {
+            "Project_Name": "HTTP server",
+            "png": true,
+            "Body": "Built using C and multithreading library, this projects aims to create a thread pool of n size that list to a specified port in order to perform operations GET, PUT, HEAD using the HTTP/1.1 standard library"
+        }
     }
 }
